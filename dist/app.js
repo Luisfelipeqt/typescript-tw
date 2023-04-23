@@ -1,21 +1,24 @@
 "use strict";
-var ProdutoStatus;
-(function (ProdutoStatus) {
-    ProdutoStatus[ProdutoStatus["Ativo"] = 1] = "Ativo";
-    ProdutoStatus[ProdutoStatus["Inativo"] = 2] = "Inativo";
-    ProdutoStatus[ProdutoStatus["Indisponivel"] = 3] = "Indisponivel";
-})(ProdutoStatus || (ProdutoStatus = {}));
-function checarProduto(status) {
-    switch (status) {
-        case ProdutoStatus.Ativo:
-            console.log("Produto Disponível");
-            break;
-        case ProdutoStatus.Inativo:
-            console.log("Produto Não Encontrado");
-            break;
-        case ProdutoStatus.Indisponivel:
-            console.log("Produto Aguardando Estoque");
-            break;
+let cachorro = {
+    nome: "RuffleS",
+    idade: 0,
+    estaVivo: true,
+    nascer() {
+        this.estaVivo = true;
+        return console.log(`O ${this.nome} nasceu!`);
+    },
+    crescer() {
+        this.idade++;
+        return console.log(`O ${this.nome} cresceu! Ele está com ${this.idade} anos`);
+    },
+    morrer() {
+        this.estaVivo = false;
+        this.idade = 0;
+        return console.log(`O ${this.nome} morreu!`);
     }
-}
-checarProduto(1);
+};
+cachorro.nascer();
+cachorro.crescer();
+cachorro.crescer();
+cachorro.crescer();
+cachorro.morrer();
