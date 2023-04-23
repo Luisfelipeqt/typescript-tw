@@ -2,7 +2,7 @@
 let nome;
 let sobrenome;
 let idade;
-nome = "RuffleS";
+nome = "Stella Sophia Campelo";
 sobrenome = "Rodrigues";
 idade = 28;
 console.log(`nome: ${nome} ${sobrenome}, idade: ${idade}`);
